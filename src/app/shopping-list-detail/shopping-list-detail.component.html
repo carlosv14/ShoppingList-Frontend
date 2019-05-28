@@ -1,0 +1,25 @@
+<div *ngIf="shoppingList" class="card">
+  <div class="card-body">
+    <h2 class="card-title">{{shoppingList.name}}</h2>
+    <div class="card-text">
+       <ul *ngFor = "let item of shoppingList.shoppingListItems">
+        <li>{{item.name}}: {{item.amount}}</li>
+       </ul>
+       <div>
+          <div class="form-group">
+              Name:
+              <input type="text" [(ngModel)] = "shoppingListItem.name" class="form-control">
+            </div>
+            <div class="form-group">
+                Amount:
+                <input type="text" [(ngModel)] = "shoppingListItem.amount" class="form-control">
+            </div>
+       </div>
+
+        <br>
+        <button class="btn btn-primary" (click) = "saveData();">
+          Guardar
+        </button>
+    </div>
+  </div>
+</div>

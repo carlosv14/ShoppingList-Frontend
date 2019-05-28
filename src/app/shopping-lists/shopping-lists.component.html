@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">Listas de Compra</h2>
+    <div class="card-text">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <th>
+              Nombre
+            </th>
+          </thead>
+          <tbody *ngFor="let list of shoppingLists" (click) = "onClick(list);">
+         
+            <tr routerLink = "/ShoppingLists/{{list.id}}">
+                
+                <td>
+                   
+                    {{list.name}}
+                  </td>
+                
+            </tr>
+        
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
